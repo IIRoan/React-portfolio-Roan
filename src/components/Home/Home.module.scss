@@ -1,0 +1,51 @@
+/* Text for Header */
+
+.toptext h4 {
+    position: relative;
+    padding: 0;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 30px;
+}
+
+.toptext h4 span {
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: #F0ED93;
+}
+
+.toptext p {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 28px;
+    text-align: center;
+}
+
+.item {
+    background: #fff;
+    text-align: center;
+    padding: 30px 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    height: 200px;
+}
+
+.item:hover {
+    background: #F0ED93;
+    transition: all 0.5s ease 0s;
+}
+
+.item p {
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.item h6 {
+    margin-bottom: 10px;
+}
+

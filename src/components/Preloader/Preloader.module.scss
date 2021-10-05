@@ -1,0 +1,48 @@
+/* preloader */
+.loader {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -4em;
+    margin-top: -4em;
+    border-radius: 60px;
+    animation: loader 2s linear infinite;
+    -webkit-animation: loader 2s linear infinite;
+    background-image: url(https://iroan.tech/img/logo-minimal.png);
+    z-index: 2000;
+}
+
+@keyframes loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+}
+
+.container {
+    transition: opacity .5s ease-out;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200000;
+    background: #000;
+    pointer-events: none;
+}
