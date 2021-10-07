@@ -7,11 +7,11 @@ export default function home() {
   AOS.init();
   return(
 
-  <div data-aos="fade-up">    
-        <div id="aboutme" class="scroll-caption" className="container">
+  <div  data-aos="fade-up">    
+        <div  class="scroll-caption" className="container">
           <div className="row">
             <div className={styleshome.toptext}>
-              <h4 style={{marginTop: '5vh'}}> Hi, i am <span>Roan</span></h4>
+              <h4 id="aboutme" style={{marginTop: '5vh'}}> Hi, i am <span>Roan</span></h4>
               <p>Hey, i am Roan van Westerop. I am an 18 year old Network &amp; Media Management student with a passion for IT.
                 <br />This website serves as a portefolio aswell as a collection of my previous work.</p>
             </div>

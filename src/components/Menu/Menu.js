@@ -3,7 +3,18 @@ import React from "react";
 import styles from "./Menu.module.scss";
 import { bool } from "prop-types";
 
-const Menu = ({ open, setOpen }) => {
+const Menu = ({ open, setOpen }, props) => {
+  function menuchange(){
+    const menuchange = document.getElementById("menu")
+    if (open === false){
+      menuchange.style.transform = "translateX(0%)";
+
+    }
+    if (open === true){
+      menuchange.style.transform = "translateX(-100%)";
+
+    }
+  }
   return (
     <div className={styles.menu} id="menu" open={open}>
       <ul style={{ overflow: "hidden" }}>
@@ -13,7 +24,7 @@ const Menu = ({ open, setOpen }) => {
           </a>
         </li>
         <li className={styles.navitem}>
-          <a onClick={() => setOpen(!open)} href="/home#aboutme">
+          <a onClick={menuchange} href="/home#aboutme">
             About
           </a>
         </li>
