@@ -1,0 +1,32 @@
+@import "../../styles/global.scss";
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: 0%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    color: $white;
+}
+
+.footerlink {
+    color: $white;
+}
+
+.footer li {
+    list-style: none;
+}
+
+.footer li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: $white;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+.footer li a:hover {
+    background: $white;
+    color: $lightpurple;
+    border-radius: 20px;
+}
