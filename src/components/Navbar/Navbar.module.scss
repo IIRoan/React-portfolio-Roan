@@ -1,3 +1,4 @@
+@import "../../styles/global.scss";
 
 .header {
   justify-content: space-between;
@@ -9,48 +10,53 @@
   top: 0;
   left: 0;
   z-index: 10;
-
 }
 
 .header ul {
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
   width: 100%;
   z-index: 10;
+  height: 80px;
+  padding: 0px auto;
 }
 
 .header img {
-  position: absolute;
- left: 1vh;
- display: none;
+  height: 150px;
+  display: block;
+  left: 100px;
+  padding: 30px 20px;
+}
+
+.header ul > a {
+  display: flex;
+  flex-grow: 1;
 }
 
 .header ul li {
   list-style: none;
   margin-left: 2em;
-  
 }
 
 .header ul li a {
   text-decoration: none;
   padding: 6px 15px;
-  color: #fff;
+  color: $white;
   overflow: hidden;
   top: -10px;
   font-size: 20px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .header ul li a:hover {
-  background: #fff;
-  color: #7353BA;
+  background: $white;
+  color: $lightpurple;
   border-radius: 20px;
 }
 
 @media (max-width: 789px) {
- .header{
-   display: none;
- }
-  
+  .header {
+    display: none;
+  }
 }
