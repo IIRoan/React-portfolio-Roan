@@ -23,10 +23,10 @@ export default function ExperienceHeader(props) {
     <>
       <div className={styles.headersection}>
         <h2 id="h2" ref={textRef} className={styles.text}>
-          Experience
+         My Experience
         </h2>
-        <a ref={btnRef} href="./home#aboutme" className={styles.btn}>
-          About me
+        <a ref={btnRef} href="./home#experience" className={styles.btn}>
+          Experience
         </a>
 
         <div className={styles.imgheadcontainer}>
