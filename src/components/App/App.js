@@ -15,65 +15,72 @@ import Burger from "../Burger/Burger";
 import Menu from "../Menu/Menu";
 import Experienceheader from "../Experience-header/Experience-header";
 import Experience from "../Experience/Experience"
+import Scrollindicator from "../Scrollindicator/Scrollindicator"
+import Showcaseheader from "../Showcaseheader/Showcaseheader"
 
-function App({children}) {
+function App({ children }) {
   const [open, setOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    
+
     setTimeout(() => {
       setLoaded(true);
     }, 50);
-   
+
   }, [])
-  
+
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     // dark mode
     console.log("Dark mode")
-}
+  }
 
 
   return (
     <>
-    <Preloader loaded={loaded} />
-    <div>
-      
-      <Navbar />
-      <Burger open={open} setOpen={setOpen} />
-      <Menu open={open} setOpen={setOpen} />
+      <Preloader loaded={loaded} />
+      <div>
 
-      <BrowserRouter>
+        <Navbar />
+        <Scrollindicator />
+        <Burger open={open} setOpen={setOpen} />
+        <Menu open={open} setOpen={setOpen} />
 
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => {
-              return <Redirect to="/home" />;
-            }}
-          />
+        <BrowserRouter>
 
-          <Route path="/home">
-            <Header />
-            <Home />
-            <Experienceheader />
-            <Experience />
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return <Redirect to="/home" />;
+              }}
+            />
+
+            <Route path="/home">
+              <Header />
+              <Home />
+              <Experienceheader />
+              <Experience />
             </Route>
 
-          <Route path="/Projects">
-            <Projects />
-          </Route>
+            <Route path="/Projects">
+              <Projects />
+            </Route>
 
+            <Route path="/Showcase">
+              <Showcaseheader />
+              <Home />
+            </Route>
 
-          <Route exact path="/" component={Home} />
-          <Route component={Error} />
+            <Route exact path="/" component={Home} />
+            <Route component={Error} />
 
-        </Switch>
-        <Footer />
-      </BrowserRouter>
+          </Switch>
+          <Footer />
+        </BrowserRouter>
 
-    </div>
-            </>
+      </div>
+    </>
   );
 }
 
