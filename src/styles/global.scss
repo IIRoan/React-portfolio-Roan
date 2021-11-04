@@ -4,3 +4,11 @@ $darkpurple : #673ab7;
 $lightpurple : #7353BA;
 $white : #ffffff;
 $black : #000;
+
+@media (prefers-color-scheme: light) {
+    $white : green;
+}
+
+@media (prefers-color-scheme: dark) {
+    $white : green;
+}
