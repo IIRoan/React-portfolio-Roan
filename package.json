@@ -14,7 +14,6 @@
     "bootstrap": "^5.0.2",
     "font-awesome": "^4.7.0",
     "framer-motion": "^4.1.17",
-    "jquery": "^3.6.0",
     "react": "^17.0.2",
     "react-animation": "^1.2.2",
     "react-bootstrap": "^2.0.0-beta.4",
@@ -25,8 +24,7 @@
     "react-scroll": "^1.8.4",
     "react-simple-animate": "^3.3.12",
     "sass": "^1.40.1",
-    "styled-components": "^5.3.1",
-    "web-vitals": "^1.1.2"
+    "styled-components": "^5.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
