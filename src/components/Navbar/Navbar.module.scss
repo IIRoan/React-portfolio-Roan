@@ -1,4 +1,5 @@
 @import "../../styles/global.scss";
+/* Navbar container */
 
 .header {
   justify-content: space-between;
@@ -20,6 +21,8 @@
   height: 80px;
   padding: 0px auto;
 }
+
+/* Navbar Logo */
 
 .header img {
   height: 150px;
@@ -54,6 +57,7 @@
   color: $lightpurple;
   border-radius: 20px;
 }
+/* Remove navbar on mobile */
 
 @media (max-width: 789px) {
   .header {

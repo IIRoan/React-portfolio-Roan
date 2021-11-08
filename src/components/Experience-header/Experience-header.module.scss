@@ -1,4 +1,5 @@
 @import "../../styles/global.scss";
+  /* Header section */
 
 .headersection {
     position: relative;
@@ -27,10 +28,7 @@
     
 }
 
-.computer {
-    z-index: 11;
-    position: relative;
-}
+  /* Header big text */
 
 .headersection h2 {
     position: absolute;
@@ -39,6 +37,7 @@
     font-size: 7.5vh;
     z-index: 10;
 }
+  /* Header big button */
 
 .btn {
     text-decoration: none;

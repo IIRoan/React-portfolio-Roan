@@ -1,4 +1,6 @@
 @import "../../styles/global.scss";
+  
+/* Footer */
 
 .footer {
     background-color: rgba(0, 0, 0, 0.2);
@@ -24,9 +26,11 @@
     overflow: hidden;
     font-size: 20px;
 }
+  /* On hover link */
 
 .footer li a:hover {
     background: $white;
     color: $lightpurple;
     border-radius: 20px;
+    text-decoration: none;
 }

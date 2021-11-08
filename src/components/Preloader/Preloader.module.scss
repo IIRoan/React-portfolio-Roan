@@ -1,4 +1,4 @@
-/* preloader */
+/* the image that spins */
 .loader {
     width: 120px;
     height: 120px;
@@ -14,6 +14,8 @@
     z-index: 2000;
 }
 
+
+ /* The spinner animation */
 @keyframes loader {
     0% {
         -webkit-transform: rotate(0deg);
@@ -35,6 +37,7 @@
     }
 }
 
+/* the background */
 .container {
     transition: opacity .5s ease-out;
     position: fixed;

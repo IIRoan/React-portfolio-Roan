@@ -1,5 +1,5 @@
 @import "../../styles/global.scss";
-
+/* Front image container */
 .headersection {
     position: relative;
     width: 100%;
@@ -13,11 +13,13 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
 }
 
+/* Front image container */
 .imgheadcontainer {
     height: 100vh; 
     width: 100vw; 
     position: absolute;
 }
+/* Front video in header */
 .imgheadcontainer > video {
     object-fit: cover;
     height: 100vh; 
@@ -27,11 +29,13 @@
     
 }
 
+/* Front image in header */
 .computer {
     z-index: 11;
     position: relative;
 }
 
+/* Front text in header */
 .headersection h2 {
     position: absolute;
     color: $white;
@@ -39,7 +43,7 @@
     font-size: 7.5vh;
     z-index: 10;
 }
-
+/* Front button in header */
 .btn {
     text-decoration: none;
     display: inline-block;

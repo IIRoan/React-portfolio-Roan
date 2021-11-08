@@ -1,6 +1,6 @@
 @import "../../styles/global.scss";
 
-/* Text for Header */
+/* Top text */
 
 .toptext h4 {
     position: relative;
@@ -15,6 +15,8 @@
     margin-bottom: 30px;
 }
 
+/* Top text hightlight */
+
 .toptext h4 span {
     font-weight: 700;
     padding-bottom: 10px;
@@ -27,6 +29,8 @@
     line-height: 28px;
     text-align: center;
 }
+
+  /* Items in the table*/
 
 .item {
     background: $white;
