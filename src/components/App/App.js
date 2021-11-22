@@ -25,7 +25,7 @@ function App({ children }) {
 
     setTimeout(() => {
       setLoaded(true);
-    }, 50);
+    }, 500);
 
   }, [])
 
