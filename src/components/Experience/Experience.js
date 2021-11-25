@@ -51,7 +51,7 @@ export default function Experience() {
                 </div>
                 <ul>
                   <li>
-                    <span>De Kale en De Pannekoek (DPDK)</span>
+                    <span>De Pannekoek en De Kale (DPDK)</span>
                     <small>DevOps Intern </small> <small> 2021-2022</small>
                   </li>
                 </ul>
