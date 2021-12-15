@@ -55,3 +55,14 @@
     margin-bottom: 10px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .item {
+        background: hsl(210, 10%, 62%);
+        text-align: center;
+        padding: 30px 25px;
+        border-radius: 20px;
+        margin-bottom: 25px;
+        height: 250px;
+
+    }
+}

@@ -40,6 +40,8 @@ function App({ children }) {
       <Preloader loaded={loaded} />
       <div>
 
+        <Router><Link></Link></Router>
+
         <Navbar />
         <Scrollindicator />
         <Burger open={open} setOpen={setOpen} />

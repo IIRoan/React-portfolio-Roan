@@ -12,7 +12,7 @@ export default function Footer() {
         <a href="https://github.com/IIRoan" class="fa fa-github"> </a>
       </li>
       <p1>© 2021 Copyright - </p1>
-      <a className={stylesfooter.footerlink} href="https://iroan.tech/">Roan van Westerop</a>
+      <a className={stylesfooter.footerlink} href="https://iroan.net/">Roan van Westerop</a>
     </div>
   );
 };
