@@ -3,7 +3,6 @@ import image_back from './image_back.png'
 import computer from './computer.png'
 import styles from './Header.module.scss'
 
-
 export default function Header(props) {
   const textRef = useRef();
   const btnRef = useRef();
@@ -24,7 +23,7 @@ export default function Header(props) {
       <div className={styles.imgheadcontainer}>
         <img src={computer} className={styles.computer} alt="frontimage" />
       </div>
-      <h2 ref={textRef} className={styles.text}>Roan van Westerop</h2>
+      <h2 ref={textRef} className={styles.text}><span>Roan</span> van Westerop</h2>
       <a ref={btnRef} href="./home#aboutme" className={styles.btn} >About me</a>
     </div>
   );

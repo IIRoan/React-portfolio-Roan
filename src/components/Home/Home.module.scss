@@ -30,7 +30,7 @@
     text-align: center;
 }
 
-  /* Items in the table*/
+/* Items in the table*/
 
 .item {
     background: $white;
@@ -56,13 +56,40 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .item {
-        background: hsl(210, 10%, 62%);
-        text-align: center;
-        padding: 30px 25px;
-        border-radius: 20px;
-        margin-bottom: 25px;
-        height: 250px;
 
+
+    .toptext h4 {
+        position: relative;
+        padding: 0;
+        color: $darkblue;
+        line-height: 1;
+        letter-spacing: 0.3px;
+        font-size: 34px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: none;
+        margin-bottom: 30px;
+    }
+
+
+    .item {
+        background: $darkblue;
+    }
+    .item p {
+        color: $white;
+    }
+    .item h6 {
+        color: $white;
+    }
+
+    .item:hover {
+        background: $darkgrey;
+        transition: all 0.5s ease 0s;
+    }
+    .item:hover p {
+        color: $yellow;
+    }
+    .item i {
+        color: $yellow;
     }
 }

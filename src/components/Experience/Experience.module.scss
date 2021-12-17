@@ -1,12 +1,11 @@
 @import "../../styles/global.scss";
-  /* container CSS grid */
+/* container CSS grid */
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding-bottom: 20px;
-    overflow:visible;
-
+    overflow: visible;
 }
 
 .educationcontainer {
@@ -15,7 +14,7 @@
     grid-template-rows: 1fr;
     grid-column-gap: 40px;
     grid-row-gap: 0px;
-} 
+}
 
 .education {
     padding: 35px 30px;
@@ -29,13 +28,11 @@
     border-radius: 20px;
 }
 
-
-@media (max-width: 1220px){
-    .educationcontainer{
+@media (max-width: 1220px) {
+    .educationcontainer {
         display: block;
-    
     }
-    .education{
+    .education {
         width: 80%;
         margin: 0 auto;
         margin-bottom: 50px;
@@ -133,11 +130,11 @@ h3 {
     text-align: center;
     margin-right: 20px;
     transition-duration: 0.3s;
-    display:inline-block;
+    display: inline-block;
     margin-bottom: 0px;
 }
 
-.texteducation{
+.texteducation {
     color: $black;
     margin: 10px 0;
     text-transform: uppercase;
@@ -147,3 +144,27 @@ h3 {
     margin-bottom: 20px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .toptext h2 {
+        color: $darkblue;
+    }
+
+    .education {
+        background: $darkblue;
+    }
+    .texteducation {
+        color: $white;
+    }
+    .education ul li span {
+        color: $white;
+    }
+    .education ul li small {
+        color: $white;
+    }
+}
+
+@media (max-width: 789px) {
+    .texteducation {
+        margin-left: -5%;    
+    }
+}

@@ -2,13 +2,12 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { BrowserRouter as Router, Link, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Link, Navigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import Home from "../Home/Home";
 import Footer from "../Footer/Footer";
-import Error from "../Error/Error";
 import Preloader from "../Preloader/Preloader";
 import Projects from "../Projects/Projects";
 import Burger from "../Burger/Burger";
@@ -40,46 +39,54 @@ function App({ children }) {
       <Preloader loaded={loaded} />
       <div>
 
-        <Router><Link></Link></Router>
-
         <Navbar />
         <Scrollindicator />
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />
-
         <BrowserRouter>
+          <Routes>
 
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => {
-                return <Redirect to="/home" />;
-              }}
-            />
+            <Route path="/" element={<Navigate replace to="/home" />} />
 
-            <Route path="/home">
-              <Header />
-              <Home />
-              <Experienceheader />
-              <Experience />
+
+            <Route path="/home" element={
+              <>
+                <Header />
+                <Home />
+                <Experienceheader />
+                <Experience />
+              </>
+            }>
             </Route>
 
-            <Route path="/Projects">
-              <Projects />
+            <Route path="/Projects" element={
+              <>
+                <Projects />
+              </>
+            }>
             </Route>
 
-            <Route path="/Showcase">
-              <Showcaseheader />
-              <Home />
+            <Route path="/Showcase" element={
+              <>
+                <Home />
+                <Experience />
+              </>
+            }>
             </Route>
 
-            <Route exact path="/" component={Home} />
-            <Route component={Error} />
+            <Route path="/white" element={
+              <>
+                <Link />
+              </>
+            }>
+            </Route>
 
-          </Switch>
-          <Footer />
-        </BrowserRouter>
+            <Route path="*" element={<Navigate replace to="/" />} />
+
+
+          </Routes>
+        </BrowserRouter>,
+        <Footer />
 
       </div>
     </>

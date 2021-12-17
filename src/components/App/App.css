@@ -1,20 +1,19 @@
 /* Global settings */
 
 * {
-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+        Helvetica Neue, sans-serif;
 }
-
-
 
 /* background gradient */
 
 body {
-    background: linear-gradient(-30deg, #FAA6FF, #7353BA, #2F195F, #ca9ecf);
+    background: linear-gradient(-30deg, #faa6ff, #7353ba, #2f195f, #ca9ecf);
     background-size: 400% 400%;
     z-index: -1000;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    max-width: 100%;
+    overflow-x: hidden;
 }
-
-

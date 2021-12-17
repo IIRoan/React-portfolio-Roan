@@ -10,7 +10,7 @@ export default function Experience() {
     <>
       <section id="experience" >
         <div data-aos="fade-up" className={stylesExp.container} >
-          <div class="row">
+          <div className="row">
             <div className={stylesExp.toptext} >
               <h2>This is my <span>Education</span></h2>
               <p>Final year Network & media management</p>
@@ -19,7 +19,7 @@ export default function Experience() {
             <div className={stylesExp.educationcontainer}>
               <div className={stylesExp.education}>
                 <div className={stylesExp.texteducation}>
-                  <h3> <i class="fa fa-graduation-cap" aria-hidden="true"></i></h3> <span>Education</span>
+                  <h3> <i className="fa fa-graduation-cap" aria-hidden="true"></i></h3> <span>Education</span>
                 </div>
                 <ul>
                   <li>
@@ -47,7 +47,7 @@ export default function Experience() {
 
               <div className={stylesExp.education}>
                 <div className={stylesExp.texteducation}>
-                  <h3> <i class="fa fa-briefcase" aria-hidden="true"></i></h3> <span>Work experience</span>
+                  <h3> <i className="fa fa-briefcase" aria-hidden="true"></i></h3> <span>Work experience</span>
                 </div>
                 <ul>
                   <li>

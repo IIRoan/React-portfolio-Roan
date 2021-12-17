@@ -19,7 +19,7 @@ const Menu = ({ open, setOpen }, props) => {
     <div className={styles.menu} id="menu" open={open}>
       <ul style={{ overflow: "hidden" }}>
         <li className={styles.navitem}>
-          <a class="active" href="../">
+          <a className="active" href="../">
             Home
           </a>
         </li>
@@ -32,16 +32,16 @@ const Menu = ({ open, setOpen }, props) => {
           <a href="../projects/">Projects</a>
         </li>
         <li className={styles.navitem}>
-          <a href="https://iroan.tech" class="fa fa-at">
+          <a href="https://iroan.tech" className="fa fa-at">
             {" "}
           </a>
           <a
             href="https://nl.linkedin.com/in/roan-van-westerop-186965200"
-            class="fa fa-linkedin"
+            className="fa fa-linkedin"
           >
             {" "}
           </a>
-          <a href="https://github.com/IIRoan" class="fa fa-github">
+          <a href="https://github.com/IIRoan" className="fa fa-github">
             {" "}
           </a>
         </li>

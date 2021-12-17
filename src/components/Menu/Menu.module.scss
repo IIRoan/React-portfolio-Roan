@@ -77,3 +77,11 @@
       margin: 3rem -50px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .menu ul li a {
+      color: $darkblue;
+  }
+
+
+}
