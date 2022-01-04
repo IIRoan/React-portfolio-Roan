@@ -11,6 +11,7 @@ export default function Navbar(props) {
           <li><a className="active" href="../">Home</a></li>
           <li><a href="/home#aboutme">About</a></li>
           <li><a href="../projects/">Projects</a></li>
+          <li><a href="../contact/">Contact</a></li>
         </ul>
       </div>
     </div>
