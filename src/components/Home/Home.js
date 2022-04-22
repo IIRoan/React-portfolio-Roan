@@ -5,13 +5,14 @@ import 'aos/dist/aos.css';
 
 export default function home() {
   AOS.init();
-  return(
-
-  <div  data-aos="fade-up">    
-        <div  class="scroll-caption" className="container">
+  return (
+        // The home cards
+    <div id="aboutme">
+      <div data-aos="fade-up">
+        <div class="scroll-caption" className="container">
           <div className="row">
             <div className={styleshome.toptext}>
-              <h4 id="aboutme" style={{marginTop: '5vh'}}> Hi, i am <span>Roan</span></h4>
+              <h4 style={{ marginTop: '5vh' }}> Hi, i am <span>Roan</span></h4>
               <p>Hey, i am Roan van Westerop. I am an 18 year old Network &amp; Media Management student with a passion for IT.
                 <br />This website serves as a portefolio aswell as a collection of my previous work.</p>
             </div>
@@ -48,7 +49,7 @@ export default function home() {
               <div className={styleshome.item}>
                 <i className="icons fa fa-code" />
                 <h6><strong>Basic HTMl/CSS/JS Experience</strong></h6>
-                <p>I have a basic amount of experience in web languages like HTML, CSS and JavaScript.<br /> for example, i made this website. Check some more of my projects <a href="https://github.com/IIRoan" style={{color: 'blueviolet', textDecoration: 'none'}}>here</a></p>
+                <p>I have a basic amount of experience in web languages like HTML, CSS and JavaScript.<br /> for example, i made this website. Check some more of my projects <a href="https://github.com/IIRoan" style={{ color: 'blueviolet', textDecoration: 'none' }}>here</a></p>
               </div>
             </div>
             <div className="col-lg-4">
@@ -61,5 +62,6 @@ export default function home() {
           </div>
         </div>
       </div>
-      );
-    };
+    </div>
+  );
+};

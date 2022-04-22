@@ -23,22 +23,22 @@ export default function Experience() {
                 </div>
                 <ul>
                   <li>
-                    <span>Network & Media management - IT </span>
-                    <small>Grafisch Lyceum Rotterdam </small> <small> 2018-2021</small>
+                    <span>HBO ICT </span>
+                    <small>The Hague University of Applied Sciences</small> <small> 2022-Current</small>
                   </li>
                 </ul>
+                <ul>
+                  <li>
+                  <span>Network & Media management - IT </span>
+                  <small>Grafisch Lyceum Rotterdam </small> <small> 2018-2022</small>
+
+                  </li>
+                </ul>
+
                 <ul>
                   <li>
                     <span>Mavo VMBO-TL</span>
                     <small>Melanchthon de Blesewic </small> <small> 2014-2018</small>
-
-                  </li>
-                </ul>
-
-                <ul>
-                  <li>
-                    <span>PlaceHolder</span>
-                    <small>2018-2021</small>
 
                   </li>
                 </ul>
@@ -65,8 +65,8 @@ export default function Experience() {
 
                 <ul>
                   <li>
-                    <span>PlaceHolder</span>
-                    <small>2018-2021</small>
+                    <span>...</span>
+                    <small>...</small>
 
                   </li>
                 </ul>

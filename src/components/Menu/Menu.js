@@ -4,6 +4,8 @@ import styles from "./Menu.module.scss";
 import { bool } from "prop-types";
 
 const Menu = ({ open, setOpen }, props) => {
+
+      // Menu open and close
   function menuchange(){
     const menuchange = document.getElementById("menu")
     if (open === false){
@@ -32,7 +34,7 @@ const Menu = ({ open, setOpen }, props) => {
           <a href="../projects/">Projects</a>
         </li>
         <li className={styles.navitem}>
-          <a href="https://iroan.tech" className="fa fa-at">
+          <a href="https://iroan.net" className="fa fa-at">
             {" "}
           </a>
           <a

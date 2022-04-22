@@ -4,6 +4,8 @@ import computer from './computer.png'
 import styles from './Header.module.scss'
 
 export default function Header(props) {
+
+  // Move the button and text down with the topmargin
   const textRef = useRef();
   const btnRef = useRef();
   useEffect(() => {

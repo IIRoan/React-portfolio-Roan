@@ -9,19 +9,18 @@ import Header from "../Header/Header";
 import Home from "../Home/Home";
 import Footer from "../Footer/Footer";
 import Preloader from "../Preloader/Preloader";
-import Projects from "../Projects/Projects";
 import Burger from "../Burger/Burger";
 import Menu from "../Menu/Menu";
 import Experienceheader from "../Experience-header/Experience-header";
 import Experience from "../Experience/Experience"
 import Scrollindicator from "../Scrollindicator/Scrollindicator"
-import Showcaseheader from "../Showcaseheader/Showcaseheader"
 
 function App({ children }) {
+      // Preloader state with loaded
   const [open, setOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-
+    // The wait timer for the preloader
     setTimeout(() => {
       setLoaded(true);
     }, 500);
@@ -33,7 +32,7 @@ function App({ children }) {
     console.log("Dark mode")
   }
 
-
+    // Routing
   return (
     <>
       <Preloader loaded={loaded} />
@@ -55,28 +54,6 @@ function App({ children }) {
                 <Home />
                 <Experienceheader />
                 <Experience />
-              </>
-            }>
-            </Route>
-
-            <Route path="/Projects" element={
-              <>
-                <Projects />
-              </>
-            }>
-            </Route>
-
-            <Route path="/Showcase" element={
-              <>
-                <Home />
-                <Experience />
-              </>
-            }>
-            </Route>
-
-            <Route path="/white" element={
-              <>
-                <Link />
               </>
             }>
             </Route>

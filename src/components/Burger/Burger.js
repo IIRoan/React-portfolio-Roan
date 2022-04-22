@@ -8,6 +8,8 @@ import StyledBurger from './Burger.module.scss';
 const Burger = ({ open, setOpen }) => {
 
   function menuchange(){
+
+        // Open and close the menu
     const menuchange = document.getElementById("menu")
     if (open === false){
       menuchange.style.transform = "translateX(0%)";
@@ -19,6 +21,7 @@ const Burger = ({ open, setOpen }) => {
     }
   }
   return (
+    // The burger menu
     <div onClick={menuchange}>
     <div className={StyledBurger.StyledBurger} open={open} onClick={() => setOpen(!open)}>
       <div className={StyledBurger.bar} />
