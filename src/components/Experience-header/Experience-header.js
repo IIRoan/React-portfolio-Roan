@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import image_back from "./city-bg.jpg";
+import image_back from "./city-bg.webp";
 import styles from "./Experience-header.module.scss";
 
 export default function ExperienceHeader(props) {

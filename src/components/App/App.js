@@ -58,11 +58,18 @@ function App({ children }) {
             }>
             </Route>
 
+            <Route path="/animation" element={
+              <>
+              </>
+            }>
+            </Route>
+
             <Route path="*" element={<Navigate replace to="/" />} />
 
 
           </Routes>
         </BrowserRouter>,
+        
         <Footer />
 
       </div>

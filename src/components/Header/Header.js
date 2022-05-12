@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import image_back from './image_back.png'
-import computer from './computer.png'
+import image_back from './image_back.webp'
+import computer from './computer.webp'
 import styles from './Header.module.scss'
 
 export default function Header(props) {

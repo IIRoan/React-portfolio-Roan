@@ -1,6 +1,6 @@
 import React from 'react';
 import stylesnav from './Navbar.module.scss';
-import logominimal from './logo-minimal.png'
+import logominimal from './logo-minimal.webp'
 
 export default function Navbar(props) {
   return (

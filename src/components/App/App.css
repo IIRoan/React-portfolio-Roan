@@ -9,7 +9,7 @@
 
 body {
     background: linear-gradient(-30deg, #faa6ff, #7353ba, #2f195f, #ca9ecf);
-    background-size: 400% 400%;
+    background-size: 900% 900%;
     z-index: -1000;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
