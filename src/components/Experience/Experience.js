@@ -1,82 +1,67 @@
-import React from "react";
-import stylesExp from "./Experience.module.scss";
-import 'font-awesome/css/font-awesome.min.css';
+import React from 'react';
+import styleshome from './Home.module.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export default function Experience() {
+export default function home() {
   AOS.init();
   return (
-    <>
-      <section id="experience" >
-        <div data-aos="fade-up" className={stylesExp.container} >
+        // The home cards
+    <div id="aboutme">
+      <div data-aos="fade-up">
+        <div class="scroll-caption" className="container">
           <div className="row">
-            <div className={stylesExp.toptext} >
-              <h2>This is my <span>Education</span></h2>
-              <p>Software engineering student @ The Hague</p>
+            <div className={styleshome.toptext}>
+              <h4 style={{ marginTop: '5vh' }}> Hi, I am <span>Roan</span></h4>
+              <p>Hey, I am Roan van Westerop. I am a 19 year old Software Engineer Student in the Hague.
+                <br />This website serves as a portfolio, as well as a collection of my previous work.</p>
             </div>
-
-            <div className={stylesExp.educationcontainer}>
-              <div className={stylesExp.education}>
-                <div className={stylesExp.texteducation}>
-                  <h3> <i className="fa fa-graduation-cap" aria-hidden="true"></i></h3> <span>Education</span>
-                </div>
-                <ul>
-                  <li>
-                    <span>HBO ICT </span>
-                    <small>The Hague University of Applied Sciences</small> <small> 2022-Current</small>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                  <span>Network & Media management - IT </span>
-                  <small>Grafisch Lyceum Rotterdam </small> <small> 2018-2022</small>
-
-                  </li>
-                </ul>
-
-                <ul>
-                  <li>
-                    <span>Mavo VMBO-TL</span>
-                    <small>Melanchthon de Blesewic </small> <small> 2014-2018</small>
-
-                  </li>
-                </ul>
-
-              </div>
-
-              <div className={stylesExp.education}>
-                <div className={stylesExp.texteducation}>
-                  <h3> <i className="fa fa-briefcase" aria-hidden="true"></i></h3> <span>Work experience</span>
-                </div>
-                <ul>
-                  <li>
-                    <span>De Pannekoek en De Kale (DPDK)</span>
-                    <small>DevOps Intern </small> <small> 2021-2022</small>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <span>Albert Heijn</span>
-                    <small>Part-time </small> <small> 2018-Current</small>
-
-                  </li>
-                </ul>
-
-                <ul>
-                  <li>
-                    <span>...</span>
-                    <small>...</small>
-
-                  </li>
-                </ul>
-
+            <div className="col-lg-4">
+              <div className={styleshome.item}>
+                <i className="icons fa fa-linux " />
+                <h6><strong>Linux</strong></h6>
+                <p>I have a good deal of experience with Linux, a lot of that experience is with Ubuntu Server. I host my website, game servers and VPN on Ubuntu in the cloud.
+                </p>
               </div>
             </div>
-
+            <div className="col-lg-4">
+              <div className={styleshome.item}>
+                <i className="icons fa fa-gamepad" />
+                <h6><strong>Game Servers</strong></h6>
+                <p>In my spare time, I host game servers for me and my friends. The types of servers change a lot, from Java Minecraft Servers to Battlefield servers.</p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styleshome.item}>
+                <i className="icons fa fa-windows" />
+                <h6><strong>Windows (server)</strong></h6>
+                <p>Besides Linux, I also have a great deal of experience with Windows. I have experience with Active Directory, DNS, DHCP, DFS, MSSQL and IIS. I also know a lot about Windows enterprise software.</p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styleshome.item}>
+                <i className="icons fa fa-graduation-cap" />
+                <h6><strong>Network- Media management</strong></h6>
+                <p>I finished my degree in Network and Media management at Grafisch Lyceum in Rotterdam in 2022.<br /> (MBO4)</p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styleshome.item}>
+                <i className="icons fa fa-code" />
+                <h6><strong>Basic HTMl/CSS/JS Experience</strong></h6>
+                <p>I have a basic amount of experience in web languages like HTML, CSS and JavaScript.<br /> For example, I made this website. Check out some more of my projects <a href="https://github.com/IIRoan" style={{ color: 'blueviolet', textDecoration: 'none' }}>here</a></p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styleshome.item}>
+                <i className="icons fa fa-info" />
+                <h6><strong>+ A lot more</strong></h6>
+                <p />
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
-}
+};
