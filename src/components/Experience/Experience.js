@@ -13,7 +13,7 @@ export default function Experience() {
           <div className="row">
             <div className={stylesExp.toptext} >
               <h2>This is my <span>Education</span></h2>
-              <p>Final year Network & media management</p>
+              <p>Software engineering student @ The Hague</p>
             </div>
 
             <div className={stylesExp.educationcontainer}>
@@ -58,7 +58,7 @@ export default function Experience() {
                 <ul>
                   <li>
                     <span>Albert Heijn</span>
-                    <small>Part-time </small> <small> 2018-2021</small>
+                    <small>Part-time </small> <small> 2018-Current</small>
 
                   </li>
                 </ul>
