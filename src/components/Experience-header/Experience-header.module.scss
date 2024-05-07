@@ -1,6 +1,6 @@
 @import "../../styles/global.scss";
-  /* Header section */
 
+/* Header section */
 .headersection {
     position: relative;
     width: 100%;
@@ -19,17 +19,16 @@
     width: 100vw; 
     position: absolute;
 }
+
 .imgheadcontainer > img {
     object-fit: cover;
     height: 100vh; 
     width: 100vw; 
     object-position: center;
     display: block;
-    
 }
 
-  /* Header big text */
-
+/* Header big text */
 .headersection h2 {
     position: absolute;
     color: $white;
@@ -37,8 +36,8 @@
     font-size: 7.5vh;
     z-index: 10;
 }
-  /* Header big button */
 
+/* Header big button */
 .btn {
     text-decoration: none;
     display: inline-block;
@@ -52,4 +51,8 @@
     bottom: 10%;
 }
 
-
+/* Dark mode specific styles for the button */
+.darkModeBtn {
+    background: $darkblue;
+    color: $white;
+}

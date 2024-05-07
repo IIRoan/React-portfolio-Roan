@@ -1,11 +1,12 @@
-import React from 'react';
-import stylesfooter from './Footer.module.scss'
-
+import React, { useContext } from 'react';
+import stylesfooter from './Footer.module.scss';
+import { ThemeContext } from "../../styles/ThemeContext";
 
 export default function Footer() {
-  return (
+  const { isDarkMode } = useContext(ThemeContext);
 
-    <div className={stylesfooter.footer}>
+  return (
+    <div className={`${stylesfooter.footer} ${isDarkMode ? stylesfooter.darkMode : ''}`}>
       <li>
         <a href="https://www.roan.dev" className="fa fa-at"> </a>
         <a href="mailto:public@roan.dev" className="fa fa-envelope"> </a>
@@ -13,7 +14,7 @@ export default function Footer() {
         <a href="https://github.com/IIRoan" className="fa fa-github"> </a>
         <a href="./credits.txt" className="fa fa-image"></a>
       </li>
-      <>© 2021 Copyright - </>
+      <>© 2024 Copyright - </>
       <a className={stylesfooter.footerlink} href="https://www.roan.dev/">Roan van Westerop</a>
     </div>
   );

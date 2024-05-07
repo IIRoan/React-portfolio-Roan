@@ -22,6 +22,12 @@
   }
 
   
+  @media (min-width: 790px) {
+    .StyledBurger {
+      display: none;
+    }
+  }
+  
   .bar {
     width: 2rem;
     height: 0.25rem;
@@ -31,11 +37,9 @@
     position: relative;
     transform-origin: 1px;
   }
-
-  @media (prefers-color-scheme: dark) {
+  
+  .dark-mode {
     .bar {
-      background: $darkgrey;
+      background: $darkblue;
     }
-
-    
   }

@@ -1,7 +1,6 @@
 @import "../../styles/global.scss";
-  
-/* Footer */
 
+/* Footer */
 .footer {
     background-color: rgba(0, 0, 0, 0.2);
     bottom: 0%;
@@ -10,28 +9,49 @@
     line-height: 40px;
     color: $white;
     margin-bottom: 0px;
+
+    &.darkMode {
+        color: $darkblue;
+    }
+
+    li {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: $white;
+            overflow: hidden;
+            font-size: 20px;
+
+            &:hover {
+                background: $white;
+                color: $lightpurple;
+                border-radius: 20px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &.darkMode {
+        li {
+            a {
+                color: $darkblue;
+
+                &:hover {
+                    background: $darkgrey;
+                    color: $darkpurple;
+                }
+            }
+        }
+    }
 }
 
 .footerlink {
     color: $white;
-}
-
-.footer li {
-    list-style: none;
-}
-
-.footer li a {
     text-decoration: none;
-    padding: 6px 15px;
-    color: $white;
-    overflow: hidden;
-    font-size: 20px;
-}
-  /* On hover link */
 
-.footer li a:hover {
-    background: $white;
-    color: $lightpurple;
-    border-radius: 20px;
-    text-decoration: none;
+    .footer.darkMode & {
+        color: $yellow;
+    }
 }

@@ -1,10 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import image_back from "./city-bg.webp";
 import styles from "./Experience-header.module.scss";
+import { ThemeContext } from "../../styles/ThemeContext"; // Ensure the path is correct
 
 export default function ExperienceHeader(props) {
-
-    // Move the button and text down with the topmargin
+  const { isDarkMode } = useContext(ThemeContext);
   const textRef = useRef();
   const btnRef = useRef();
 
@@ -25,14 +25,13 @@ export default function ExperienceHeader(props) {
     <>
       <div className={styles.headersection}>
         <h2 id="h2" ref={textRef} className={styles.text}>
-         My Experience
+          My Experience
         </h2>
-        <a ref={btnRef} href="./home#experience" className={styles.btn}>
+        <a ref={btnRef} href="./home#experience" className={`${styles.btn} ${isDarkMode ? styles.darkModeBtn : ''}`}>
           Experience
         </a>
-
         <div className={styles.imgheadcontainer}>
-          <img src={image_back} className={styles.backimage} alt="backimage" />{" "}
+          <img src={image_back} className={styles.backimage} alt="backimage" />
         </div>
         <div className={styles.imgheadcontainer}></div>
       </div>

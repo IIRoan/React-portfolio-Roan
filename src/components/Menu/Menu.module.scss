@@ -53,12 +53,21 @@
     text-decoration: none;
     padding: 6px 15px;
     color: $white;
+    &.dark-mode {
+      .active{
+        color: $darkblue;
+      }
+    }
   }
+    
+
+  
   .menu ul li a:hover {
     background: $white;
     color: $lightpurple;
     border-radius: 20px;
   }
+
 
   .menu a {
     font-size: 9vw;
@@ -76,12 +85,4 @@
   .navitem {
       margin: 3rem -50px;
   }
-}
-
-@media (prefers-color-scheme: dark) {
-  .menu ul li a {
-      color: $darkblue;
-  }
-
-
 }
