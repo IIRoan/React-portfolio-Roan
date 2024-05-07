@@ -11,7 +11,7 @@ export default function Navbar(props) {
           <li><a className="active" href="../">Home</a></li>
           <li><a href="/home#aboutme">About</a></li>
           <li><a href="https://github.com/IIRoan" alt="Github Link" target="_blank" rel="noreferrer">Projects</a></li>
-          <li><a href="mailto:contact@iroan.net">Contact</a></li>
+          <li><a href="mailto:public@roan.dev">Contact</a></li>
         </ul>
       </div>
     </div>

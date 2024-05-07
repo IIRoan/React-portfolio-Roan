@@ -13,7 +13,7 @@ export default function home() {
           <div className="row">
             <div className={styleshome.toptext}>
               <h4 style={{ marginTop: '5vh' }}> Hi, I am <span>Roan</span></h4>
-              <p>Hey, I am Roan van Westerop. I am a 19 year old Software Engineer Student in the Hague.
+              <p>Hey, I am Roan van Westerop. I am a 21 year old Software Developer at Rotterdam Academy.
                 <br />This website serves as a portfolio, as well as a collection of my previous work.</p>
             </div>
             <div className="col-lg-4">
