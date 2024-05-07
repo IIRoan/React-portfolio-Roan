@@ -34,7 +34,7 @@ const Menu = ({ open, setOpen }, props) => {
           <a href="../projects/">Projects</a>
         </li>
         <li className={styles.navitem}>
-          <a href="https://iroan.net" className="fa fa-at">
+          <a href="https://www.roan.dev" className="fa fa-at">
             {" "}
           </a>
           <a
