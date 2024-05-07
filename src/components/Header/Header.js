@@ -1,14 +1,14 @@
-import React, { useRef, useEffect } from "react";
-import image_back from './image_back.webp'
-import computer from './computer.webp'
-import styles from './Header.module.scss'
+import React, { useRef, useEffect, useContext } from "react";
+import image_back from './image_back.webp';
+import computer from './computer.webp';
+import styles from './Header.module.scss';
+import { ThemeContext } from "../../styles/ThemeContext"; 
 
 export default function Header(props) {
-
-  // Move the button and text down with the topmargin
-  const textRef = useRef();
-  const btnRef = useRef();
-  useEffect(() => {
+ const { isDarkMode } = useContext(ThemeContext);
+ const textRef = useRef();
+ const btnRef = useRef();
+ useEffect(() => {
     const textmove = textRef.current;
     const btnmove = btnRef.current;
     window.addEventListener('scroll', (props) => {
@@ -16,17 +16,18 @@ export default function Header(props) {
       textmove.style.marginTop = value * 1.5 + 'px';
       btnmove.style.marginTop = value * 1.5 + 'px';
     });
-  }, [])
+ }, [])
 
-  return (
-    <div className={styles.headersection}>
+ return (
+    <div className={`${styles.headersection} ${isDarkMode ? styles.darkMode : ''}`}>
       <div className={styles.imgheadcontainer}>
-        <img src={image_back} className={styles.backimage} alt="backimage" /> </div>
+        <img src={image_back} className={styles.backimage} alt="backimage" />
+      </div>
       <div className={styles.imgheadcontainer}>
         <img src={computer} className={styles.computer} alt="frontimage" />
       </div>
       <h2 ref={textRef} className={styles.text}><span>Roan</span> van Westerop</h2>
-      <a ref={btnRef} href="./home#aboutme" className={styles.btn} >About me</a>
+      <a ref={btnRef} href="./home#aboutme" className={`${styles.btn} ${isDarkMode ? styles.darkModeBtn : ''}`}>About me</a>
     </div>
-  );
+ );
 }

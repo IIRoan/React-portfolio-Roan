@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styleshome from './Home.module.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ThemeContext } from "../../styles/ThemeContext";
 
-export default function home() {
+export default function Home() {
+  
+  const { isDarkMode } = useContext(ThemeContext);
   AOS.init();
+
   return (
-        // The home cards
-    <div id="aboutme">
+    // The home cards
+    <div id="aboutme" className={isDarkMode ? styleshome.darkMode : ''}>
       <div data-aos="fade-up">
-        <div class="scroll-caption" className="container">
+        <div className="scroll-caption container">
           <div className="row">
             <div className={styleshome.toptext}>
               <h4 style={{ marginTop: '5vh' }}> Hi, I am <span>Roan</span></h4>

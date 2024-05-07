@@ -1,67 +1,11 @@
 @import "../../styles/global.scss";
 
 /* Top text */
-
-.toptext h4 {
-    position: relative;
-    padding: 0;
-    color: $white;
-    line-height: 1;
-    letter-spacing: 0.3px;
-    font-size: 34px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
-    margin-bottom: 30px;
-}
-
-/* Top text hightlight */
-
-.toptext h4 span {
-    font-weight: 700;
-    padding-bottom: 10px;
-    color: $yellow;
-}
-
-.toptext p {
-    color: $white;
-    font-size: 1.2em;
-    line-height: 28px;
-    text-align: center;
-}
-
-/* Items in the table*/
-
-.item {
-    background: $white;
-    text-align: center;
-    padding: 30px 25px;
-    border-radius: 20px;
-    margin-bottom: 25px;
-    height: 250px;
-}
-
-.item:hover {
-    background: $yellow;
-    transition: all 0.5s ease 0s;
-}
-
-.item p {
-    font-size: 15px;
-    line-height: 26px;
-}
-
-.item h6 {
-    margin-bottom: 10px;
-}
-
-@media (prefers-color-scheme: dark) {
-
-
-    .toptext h4 {
+.toptext {
+    h4 {
         position: relative;
         padding: 0;
-        color: $darkblue;
+        color: $white;
         line-height: 1;
         letter-spacing: 0.3px;
         font-size: 34px;
@@ -69,27 +13,81 @@
         text-align: center;
         text-transform: none;
         margin-bottom: 30px;
+
+        span {
+            font-weight: 700;
+            padding-bottom: 10px;
+            color: $yellow;
+        }
     }
 
+    p {
+        color: $white;
+        font-size: 1.2em;
+        line-height: 28px;
+        text-align: center;
+    }
+}
+
+/* Items in the table */
+.item {
+    background: $white;
+    text-align: center;
+    padding: 30px 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    height: 250px;
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+        background: $yellow;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 26px;
+        color: $black; 
+    }
+
+    h6 {
+        margin-bottom: 10px;
+        color: $black; 
+    }
+
+    i {
+        color: $black; 
+    }
+}
+
+/* Dark mode specific styles */
+.darkMode {
+    .toptext {
+        h4 {
+            color: $darkblue;
+        }
+
+        p {
+            color: $white; 
+        }
+    }
 
     .item {
         background: $darkblue;
-    }
-    .item p {
         color: $white;
-    }
-    .item h6 {
-        color: $white;
-    }
 
-    .item:hover {
-        background: $darkgrey;
-        transition: all 0.5s ease 0s;
-    }
-    .item:hover p {
-        color: $yellow;
-    }
-    .item i {
-        color: $yellow;
+        &:hover {
+            background: $darkgrey;
+            p, h6, i {
+                color: $yellow;
+            }
+        }
+
+        p, h6 {
+            color: $white;
+        }
+
+        i {
+            color: $yellow; 
+        }
     }
 }

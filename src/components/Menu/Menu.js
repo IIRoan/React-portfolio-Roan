@@ -1,9 +1,11 @@
 // Menu.js
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Menu.module.scss";
 import { bool } from "prop-types";
+import { ThemeContext } from "../../styles/ThemeContext";
 
 const Menu = ({ open, setOpen }, props) => {
+  const { isDarkMode } = useContext(ThemeContext);
 
       // Menu open and close
   function menuchange(){
@@ -18,7 +20,7 @@ const Menu = ({ open, setOpen }, props) => {
     }
   }
   return (
-    <div className={styles.menu} id="menu" open={open}>
+    <div className={`${styles.menu} ${isDarkMode ? styles["dark-mode"] : ""}`} id="menu" open={open}>
       <ul style={{ overflow: "hidden" }}>
         <li className={styles.navitem}>
           <a className="active" href="../">

@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { BrowserRouter as Link, Navigate } from "react-router-dom";
+import { BrowserRouter as Navigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import Home from "../Home/Home";
@@ -14,9 +14,11 @@ import Menu from "../Menu/Menu";
 import Experienceheader from "../Experience-header/Experience-header";
 import Experience from "../Experience/Experience"
 import Scrollindicator from "../Scrollindicator/Scrollindicator"
+import { ThemeContext } from '../../styles/ThemeContext';
 
-function App({ children }) {
-      // Preloader state with loaded
+function App() {
+  // Preloader state with loaded
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [open, setOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
@@ -27,52 +29,52 @@ function App({ children }) {
 
   }, [])
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // dark mode
-    console.log("Dark mode")
-  }
 
-    // Routing
+  // Routing
   return (
     <>
-      <Preloader loaded={loaded} />
-      <div>
+      <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
+        <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
+          <Preloader loaded={loaded} />
+          <div>
 
-        <Navbar />
-        <Scrollindicator />
-        <Burger open={open} setOpen={setOpen} />
-        <Menu open={open} setOpen={setOpen} />
-        <BrowserRouter>
-          <Routes>
+            <Navbar />
+            <Scrollindicator />
+            <Burger open={open} setOpen={setOpen} />
+            <Menu open={open} setOpen={setOpen} />
+            <BrowserRouter>
+              <Routes>
 
-            <Route path="/" element={<Navigate replace to="/home" />} />
-
-
-            <Route path="/home" element={
-              <>
-                <Header />
-                <Home />
-                <Experienceheader />
-                <Experience />
-              </>
-            }>
-            </Route>
-
-            <Route path="/animation" element={
-              <>
-              </>
-            }>
-            </Route>
-
-            <Route path="*" element={<Navigate replace to="/" />} />
+                <Route path="/" element={<Navigate replace to="/home" />} />
 
 
-          </Routes>
-        </BrowserRouter>,
-        
-        <Footer />
+                <Route path="/home" element={
+                  <>
+                    <Header />
+                    <Home />
+                    <Experienceheader />
+                    <Experience />
+                  </>
+                }>
+                </Route>
 
-      </div>
+                <Route path="/animation" element={
+                  <>
+                  </>
+                }>
+                </Route>
+
+                <Route path="*" element={<Navigate replace to="/" />} />
+
+
+              </Routes>
+            </BrowserRouter>,
+
+            <Footer />
+
+          </div>
+        </div>
+      </ThemeContext.Provider>
     </>
   );
 }
