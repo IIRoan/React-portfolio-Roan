@@ -45,10 +45,7 @@ function App() {
             <BrowserRouter>
               <Routes>
 
-                <Route path="/" element={<Navigate replace to="/home" />} />
-
-
-                <Route path="/home" element={
+                <Route path="/" element={
                   <>
                     <Header />
                     <Home />
