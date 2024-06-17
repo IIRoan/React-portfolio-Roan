@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useContext } from "react";
 import image_back from "./city-bg.webp";
 import styles from "./Experience-header.module.scss";
-import { ThemeContext } from "../../styles/ThemeContext"; // Ensure the path is correct
+import { ThemeContext } from "../../styles/ThemeContext";
 
 export default function ExperienceHeader(props) {
   const { isDarkMode } = useContext(ThemeContext);

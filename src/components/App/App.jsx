@@ -11,6 +11,7 @@ import Footer from "../Footer/Footer";
 import Preloader from "../Preloader/Preloader";
 import Burger from "../Burger/Burger";
 import Menu from "../Menu/Menu";
+import Error from "../Error/Error";
 import Experienceheader from "../Experience-header/Experience-header";
 import Experience from "../Experience/Experience"
 import Scrollindicator from "../Scrollindicator/Scrollindicator"
@@ -54,16 +55,7 @@ function App() {
                   </>
                 }>
                 </Route>
-
-                <Route path="/animation" element={
-                  <>
-                  </>
-                }>
-                </Route>
-
-                <Route path="*" element={<Navigate replace to="/" />} />
-
-
+                <Route path="*" element={<Error />} />
               </Routes>
             </BrowserRouter>,
 
