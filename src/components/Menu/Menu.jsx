@@ -1,24 +1,19 @@
-// Menu.js
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./Menu.module.scss";
-import { bool } from "prop-types";
+import { bool, func } from "prop-types";
 import { ThemeContext } from "../../styles/ThemeContext";
 
-const Menu = ({ open, setOpen }, props) => {
+const Menu = ({ open, setOpen }) => {
   const { isDarkMode } = useContext(ThemeContext);
 
-      // Menu open and close
-  function menuchange(){
-    const menuchange = document.getElementById("menu")
-    if (open === false){
-      menuchange.style.transform = "translateX(0%)";
-
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
     }
-    if (open === true){
-      menuchange.style.transform = "translateX(-100%)";
+  }, [open]);
 
-    }
-  }
   return (
     <div className={`${styles.menu} ${isDarkMode ? styles["dark-mode"] : ""}`} id="menu" open={open}>
       <ul style={{ overflow: "hidden" }}>
@@ -28,7 +23,7 @@ const Menu = ({ open, setOpen }, props) => {
           </a>
         </li>
         <li className={styles.navitem}>
-          <a onClick={menuchange} href="#aboutme">
+          <a onClick={() => setOpen(false)} href="#aboutme">
             About
           </a>
         </li>
@@ -53,7 +48,10 @@ const Menu = ({ open, setOpen }, props) => {
     </div>
   );
 };
+
 Menu.propTypes = {
   open: bool.isRequired,
+  setOpen: func.isRequired,
 };
+
 export default Menu;

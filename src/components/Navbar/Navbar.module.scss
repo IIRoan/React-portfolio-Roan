@@ -69,8 +69,6 @@
   }
 }
 
-
-
 .switch {
   position: relative;
   display: inline-block;
@@ -79,9 +77,9 @@
 
   input[type="checkbox"] {
     opacity: 0;
-
   }
 }
+
 .icon {
   position: absolute;
   color: $white;
@@ -92,6 +90,10 @@
   transition: transform 0.4s ease-in-out;
 }
 
+.sunIcon {
+  color: $white; 
+}
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -99,7 +101,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #999595;
   transition: .4s;
   border-radius: 34px;
 }
@@ -117,15 +119,15 @@
 }
 
 input:checked + .slider {
-  background-color: $darkpurple;
+  background-color: $darkblue;
 }
 
 input:checked + .slider .icon {
   transform: translate(-35px, -50%);
-  color: #252525; 
+  color: $white; 
 }
 
 input:checked + .slider:before {
   transform: translateX(26px);
-  background-color: #252525;
+  background-color: $white;
 }

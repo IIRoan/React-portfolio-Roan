@@ -4,6 +4,7 @@ import computer from './computer.webp';
 import styles from './Header.module.scss';
 import { ThemeContext } from "../../styles/ThemeContext"; 
 
+
 export default function Header(props) {
  const { isDarkMode } = useContext(ThemeContext);
  const textRef = useRef();
@@ -27,7 +28,7 @@ export default function Header(props) {
         <img src={computer} className={styles.computer} alt="frontimage" />
       </div>
       <h2 ref={textRef} className={styles.text}><span>Roan</span> van Westerop</h2>
-      <a ref={btnRef} href="#aboutme" className={`${styles.btn} ${isDarkMode ? styles.darkModeBtn : ''}`}>About me</a>
+      <a ref={btnRef} href="#aboutme" className={`${styles.btn} ${isDarkMode ? styles.darkModeBtn : ''}`} >About me</a>
     </div>
  );
 }

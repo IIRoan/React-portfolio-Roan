@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import stylesExp from './Experience.module.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -6,11 +6,13 @@ import { ThemeContext } from "../../styles/ThemeContext";
 
 export default function Experience() {
   const { isDarkMode } = useContext(ThemeContext);
-  AOS.init();
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
-    <div id="experience" className={`${stylesExp.container} ${isDarkMode ? stylesExp.darkMode : ''}`}>
-      <div data-aos="fade-up" className={stylesExp.toptext}>
+    <div id="experience" className={`${stylesExp.container} ${isDarkMode ? stylesExp.darkMode : ''}`} data-aos="fade-up">
+      <div className={stylesExp.toptext}>
         <h2>This is my <span>Education</span></h2>
         <p>Software Developer student @ Rotterdam Academy</p>
       </div>

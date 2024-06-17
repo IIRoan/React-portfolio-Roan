@@ -1,0 +1,120 @@
+@import "../../styles/global.scss";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Stack items vertically on mobile
+  }
+}
+
+.card {
+  background-color: $background-light;
+  color: $text-color-light;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.card h2 {
+  color: $yellow; // Different color for the title
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.description {
+  color: $text-color-light;
+  font-size: 1.2em;
+  line-height: 42px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  flex-grow: 1;
+}
+
+.learnMoreButton {
+  color: $text-color-light;
+  background: $yellow;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  width: 80%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 50px; 
+  &:hover {
+    background-color: darken($yellow, 10%);
+  }
+}
+
+/* Top text */
+.toptext {
+  margin-top: -100px; 
+  h4 {
+      position: relative;
+      padding: 0;
+      color: $white;
+      line-height: 1;
+      letter-spacing: 0.3px;
+      font-size: 34px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: none;
+      margin-bottom: 30px;
+
+      span {
+          font-weight: 700;
+          padding-bottom: 10px;
+          color: $yellow;
+      }
+  }
+
+  p {
+      color: $white;
+      font-size: 1.2em;
+      line-height: 28px;
+      text-align: center;
+  }
+}
+
+.darkMode {
+  .card {
+    background-color: $darkblue;
+    color: $white;
+  }
+  .description, .learnMoreButton, .title {
+    color: $white;
+  }
+
+  .learnMoreButton {
+    background-color: $yellow;
+    color: $darkblue;
+    &:hover {
+      background-color: darken($yellow, 10%);
+    }
+  }
+}

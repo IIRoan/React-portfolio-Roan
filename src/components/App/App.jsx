@@ -14,6 +14,8 @@ import Menu from "../Menu/Menu";
 import Error from "../Error/Error";
 import Experienceheader from "../Experience-header/Experience-header";
 import Experience from "../Experience/Experience"
+import Projects from "../Projects/Projects"
+import ProjectsHeader from "../Projects-header/Projects-header"
 import Scrollindicator from "../Scrollindicator/Scrollindicator"
 import { ThemeContext } from '../../styles/ThemeContext';
 
@@ -52,6 +54,8 @@ function App() {
                     <Home />
                     <Experienceheader />
                     <Experience />
+                    <ProjectsHeader />
+                    <Projects />
                   </>
                 }>
                 </Route>

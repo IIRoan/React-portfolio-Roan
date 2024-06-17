@@ -12,6 +12,8 @@
 
 /* Top text styling */
 .toptext {
+    margin-top: -100px; 
+
     text-align: center;
     h2 {
         color: $white;
@@ -32,7 +34,7 @@
 /* Grid container for education and experience */
 .educationcontainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); // Two columns for better spacing
+    grid-template-columns: repeat(2, 50%);
     gap: 40px; 
     width: 100%; 
 }

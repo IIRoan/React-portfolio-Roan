@@ -10,9 +10,6 @@
     color: $white;
     margin-bottom: 0px;
 
-    &.darkMode {
-        color: $darkblue;
-    }
 
     li {
         list-style: none;
@@ -25,9 +22,7 @@
             font-size: 20px;
 
             &:hover {
-                background: $white;
                 color: $lightpurple;
-                border-radius: 20px;
                 text-decoration: none;
             }
         }
@@ -36,10 +31,8 @@
     &.darkMode {
         li {
             a {
-                color: $darkblue;
 
                 &:hover {
-                    background: $darkgrey;
                     color: $darkpurple;
                 }
             }

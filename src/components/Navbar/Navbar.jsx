@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import stylesnav from './Navbar.module.scss';
-import logominimal from './logo-minimal.webp';
+import logominimal from './logo.webp';
 import { ThemeContext } from '../../styles/ThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +12,7 @@ export default function Navbar() {
   const toggleDarkMode = () => {
     const newDarkModeState = !isDarkMode;
     setIsDarkMode(newDarkModeState);
-    Cookies.set('darkMode', newDarkModeState ? 'enabled' : 'disabled', { expires: 7 }); // Save for 7 days
+    Cookies.set('darkMode', newDarkModeState ? 'enabled' : 'disabled', { expires: 7 }); 
   };
 
   // Load dark mode preference from cookies on component mount
@@ -42,7 +42,10 @@ export default function Navbar() {
             <label className={stylesnav.switch}>
               <input type="checkbox" checked={isDarkMode} onChange={toggleDarkMode} />
               <span className={stylesnav.slider}>
-                <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} className={stylesnav.icon} />
+                <FontAwesomeIcon 
+                  icon={isDarkMode ? faMoon : faSun} 
+                  className={`${stylesnav.icon} ${!isDarkMode ? stylesnav.sunIcon : ''}`} 
+                />
               </span>
             </label>
           </li>
