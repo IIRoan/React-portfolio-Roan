@@ -76,8 +76,12 @@
   display: inline-block;
   width: 60px;
   height: 34px;
-}
 
+  input[type="checkbox"] {
+    opacity: 0;
+
+  }
+}
 .icon {
   position: absolute;
   color: $white;
