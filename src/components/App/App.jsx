@@ -30,7 +30,9 @@ function App() {
       setLoaded(true);
     }, 500);
 
-  }, [])
+    // Toggle dark mode class on body
+    document.body.classList.toggle('body-dark-mode', isDarkMode);
+  }, [isDarkMode, loaded]);
 
 
   // Routing

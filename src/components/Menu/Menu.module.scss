@@ -81,8 +81,19 @@
     text-decoration: none;
     transition: color 0.2s linear;
     text-align: center;
+    
   }
+  
   .navitem {
       margin: 3rem -50px;
+  }
+}
+
+.darkMode {
+  background: $darkblue; 
+  color: $white;
+
+  .navitem a {
+      color: $white; // Ensures text color is white in dark mode
   }
 }

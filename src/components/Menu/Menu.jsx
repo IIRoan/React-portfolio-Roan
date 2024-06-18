@@ -15,7 +15,7 @@ const Menu = ({ open, setOpen }) => {
   }, [open]);
 
   return (
-    <div className={`${styles.menu} ${isDarkMode ? styles["dark-mode"] : ""}`} id="menu" open={open}>
+    <div className={`${styles.menu}  ${isDarkMode ? styles.darkMode : ''}`} id="menu" open={open}>
       <ul style={{ overflow: "hidden" }}>
         <li className={styles.navitem}>
           <a className="active" href="../">
@@ -28,7 +28,9 @@ const Menu = ({ open, setOpen }) => {
           </a>
         </li>
         <li className={styles.navitem}>
-          <a href="../projects/">Projects</a>
+          <a href="https://github.com/IIRoan" target="_blank" rel="noreferrer">
+            Github
+          </a>
         </li>
         <li className={styles.navitem}>
           <a href="https://www.roan.dev" className="fa fa-at">

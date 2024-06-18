@@ -17,3 +17,8 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+/* Dark mode background */
+.body-dark-mode {
+    background-size: 150% 150%;
+}
