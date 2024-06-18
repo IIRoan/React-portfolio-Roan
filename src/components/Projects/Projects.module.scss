@@ -34,10 +34,10 @@
 }
 
 .card h2 {
-  color: $yellow; // Different color for the title
-  font-size: 1.5em;
+  color: $darkblue;
+  font-size: 1.4em;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -104,6 +104,10 @@
 .darkMode {
   .card {
     background-color: $darkblue;
+    color: $white;
+  }
+
+  .card h2 {
     color: $white;
   }
   .description, .learnMoreButton, .title {
